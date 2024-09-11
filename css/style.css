@@ -1,0 +1,424 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+/* Estilo global para todos os tamanhos de tela */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body {
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    min-height: 100vh;
+}
+
+/* Estilos para telas maiores que 1025px */
+@media (min-width: 1025px) {
+    body {
+        margin-left: 18%;
+    }
+
+    main {
+        display: inline-block;
+        margin-top: 0.3%;
+        padding: 5px;
+        position: relative;
+    }
+
+    .pokedex {
+        width: 90%;
+    }
+
+    .pokemon_image,
+    .pokemon_image_shiny {
+        position: absolute;
+        left: 28%;
+        bottom: 45.5%;
+        transform: translate(-39%, 0);
+        height: 14%;
+    }
+
+    .pokemon_image_background {
+        position: absolute;
+        top: 31%;
+        left: 19%;
+        width: 19.6%;
+        height: 27.2%;
+    }
+
+    .pokemon_data {
+        position: absolute;
+        font-weight: 600;
+        color: #aaa;
+        top: 60%;
+        right: 61.8%;
+        font-size: clamp(8px, 5vw, 25px);
+    }
+
+    .pokemon_name {
+        color: #3a444d;
+        text-transform: capitalize;
+    }
+
+    .pokemon_data_info {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        font-weight: 600;
+        width: 20%;
+    }
+
+    .pokemon_data_info thead tr {
+        color: #000;
+    }
+
+    .pokemon_data_info thead tr th.status {
+        text-align: start;
+    }
+
+    .pokemon_data_info thead tr th.value {
+        text-align: end;
+    }
+
+    .pokemon_data_info tbody tr td.info_status {
+        color: #413d3d;
+    }
+
+    .pokemon_data_info tbody tr td.info_status_number {
+        text-align: end;
+        color: #000;
+    }
+
+    .pokemon_data_info tfoot tr td.info_status_total {
+        color: #413d3d;
+    }
+
+    .pokemon_data_info tfoot tr td.info_status_total_number {
+        text-align: end;
+        color: #000;
+    }
+
+    .pokemon_wei_hei {
+        position: absolute;
+        top: 63%;
+        left: 50%;
+        font-weight: 600;
+        width: 20%;
+    }
+
+    .pokemon_wei_hei tr td.info_wei_hei {
+        color: #3a444d;
+        font-weight: 600;
+    }
+
+    .pokemon_wei_hei tr td.info_wei_hei_val {
+        color: #000;
+        text-align: end;
+    }
+
+    .form {
+        position: absolute;
+        width: 41%;
+        top: 69%;
+        left: 16%;
+    }
+
+    .input_search {
+        width: 60%;
+        padding: 3%;
+        outline: none;
+        border: 2px solid #333;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: clamp(8px, 5vw, 1rem);
+        box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 10%;
+        left: 39%;
+        width: 41%;
+        transform: translate(-57%, 0);
+        display: flex;
+        gap: 20px;
+    }
+
+    .button {
+        width: 28%;
+        padding: 3%;
+        border: 2px solid #000;
+        border-radius: 5px;
+        font-size: clamp(5px, 5vw, 1rem);
+        font-weight: 300;
+        color: white;
+        background-color: #444;
+        box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    }
+
+    .button:active {
+        box-shadow: inset -4px 4px 0 #222;
+        font-size: 0.9rem;
+    }
+
+    .buttons_img {
+        position: absolute;
+        bottom: 69.1%;
+        left: 20%;
+        width: 65%;
+        display: flex;
+    }
+
+    .button_img {
+        cursor: pointer;
+        background: none;
+        width: 7%;
+        border-radius: 12px;
+    }
+
+    .space {
+        margin-inline: 8%;
+    }
+
+    .buttons_img_gender {
+        position: absolute;
+        bottom: 69.1%;
+        left: 35%;
+        width: 20%;
+        display: flex;
+    }
+
+    .button_img_gender {
+        cursor: pointer;
+        background: none;
+        width: 10%;
+    }
+
+    .space_gender {
+        margin-inline: 3%;
+    }
+
+    .btn-female {
+        width: 6.7%;
+    }
+
+    .pokemon_type1 {
+        position: absolute;
+        left: 49.4%;
+        bottom: 16%;
+        width: 9.5%;
+    }
+
+    .pokemon_type2 {
+        position: absolute;
+        left: 61.7%;
+        bottom: 16%;
+        width: 9.5%;
+    }
+}
+
+/* Estilos para telas menores que 640px */
+@media (max-width: 640px) {
+    body {
+        margin-left: 4%;
+        min-height: 130vh;
+    }
+
+    main {
+        display: inline-block;
+        margin-top: 0.3%;
+        padding: 5px;
+        position: relative;
+        left: -15%;
+    }
+
+    .pokedex {
+        width: 120%;
+    }
+
+    .pokemon_image_background {
+        position: absolute;
+        top: 31%;
+        left: 25.6%;
+        width: 26%;
+        height: 27.2%;
+    }
+
+    .pokemon_image,
+    .pokemon_image_shiny {
+        position: absolute;
+        bottom: 45.5%;
+        height: 14%;
+        left: 28%;
+    }
+
+    .pokemon_data {
+        position: absolute;
+        font-weight: 600;
+        color: #aaa;
+        top: 60%;
+        right: 51%;
+        font-size: 12px;
+    }
+
+    .pokemon_name {
+        color: #3a444d;
+        text-transform: capitalize;
+    }
+
+    .pokemon_data_info {
+        position: absolute;
+        top: 26%;
+        left: 70%;
+        font-weight: 600;
+        width: 20%;
+        font-size: 9px;
+    }
+
+    .pokemon_data_info thead tr {
+        color: #000;
+    }
+
+    .pokemon_data_info thead tr th.status {
+        text-align: start;
+    }
+
+    .pokemon_data_info thead tr th.value {
+        text-align: end;
+    }
+
+    .pokemon_data_info tbody tr td.info_status {
+        color: #413d3d;
+    }
+
+    .pokemon_data_info tbody tr td.info_status_number {
+        text-align: end;
+        color: #000;
+    }
+
+    .pokemon_data_info tfoot tr td.info_status_total {
+        color: #413d3d;
+    }
+
+    .pokemon_data_info tfoot tr td.info_status_total_number {
+        text-align: end;
+        color: #000;
+    }
+
+    .pokemon_wei_hei {
+        position: absolute;
+        top: 63%;
+        left: 70%;
+        font-weight: 600;
+        width: 20%;
+        font-size: 9px;
+    }
+
+    .pokemon_wei_hei tr td.info_wei_hei {
+        color: #3a444d;
+        font-weight: 600;
+    }
+
+    .pokemon_wei_hei tr td.info_wei_hei_val {
+        color: #000;
+        text-align: end;
+    }
+
+    .form {
+        position: absolute;
+        width: 52%;
+        top: 69%;
+        left: 21.5%;
+    }
+
+    .input_search {
+        padding: 2px;
+        width: 63%;
+        outline: none;
+        border: 1px solid #333;
+        border-radius: 5px;
+        box-shadow: 0px 1px 0 #888, -2px 4px 0 #333;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 13%;
+        left: 37%;
+        width: 43%;
+        transform: translate(-35%, 0);
+        display: flex;
+        gap: 20px;
+    }
+
+    .button {
+        width: 30%;
+        border: 1px solid #000;
+        border-radius: 5px;
+        font-size: 10px;
+        color: white;
+        background-color: #444;
+        box-shadow: 0px 1px 0 #222, -2px 2px 0 #000;
+    }
+
+    .button:active {
+        box-shadow: inset -2px 2px 0 #222;
+        font-size: 9px;
+    }
+
+    .buttons_img {
+        position: absolute;
+        bottom: 69.1%;
+        left: 23%;
+        width: 65%;
+        display: flex;
+    }
+
+    .button_img {
+        cursor: pointer;
+        background: none;
+        width: 7%;
+        border-radius: 12px;
+    }
+
+    .space {
+        margin-inline: 8%;
+    }
+
+    .buttons_img_gender {
+        position: absolute;
+        bottom: 69.1%;
+        left: 39%;
+        width: 20%;
+        display: flex;
+    }
+
+    .button_img_gender {
+        cursor: pointer;
+        background: none;
+        width: 10%;
+    }
+
+    .space_gender {
+        margin-inline: 3%;
+    }
+
+    .btn-female {
+        width: 6.7%;
+    }
+
+    .pokemon_type1 {
+        position: absolute;
+        left: 58%;
+        bottom: 15%;
+        width: 9.5%;
+    }
+
+    .pokemon_type2 {
+        position: absolute;
+        left: 70.7%;
+        bottom: 15%;
+        width: 9.5%;
+    }
+}
