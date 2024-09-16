@@ -78,10 +78,6 @@ const setBackgroundImage = (type1String, type2String) => {
 
 // Função para buscar dados do Pokémon da API
 const fetchPokemon = async (pokemon) => {
-    if(isNaN(pokemon)) {
-        pokemon = 1
-    }
-
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
     return APIResponse.status === 200 ? APIResponse.json() : null;
 };
