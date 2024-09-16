@@ -536,7 +536,6 @@ body {
         outline: none;
         border: 1px solid #333;
         border-radius: 5px;
-        box-shadow: 0px 1px 0 #888, -2px 4px 0 #333;
     }
 
     .buttons {
@@ -556,7 +555,6 @@ body {
         font-size: 10px;
         color: white;
         background-color: #444;
-        box-shadow: 0px 1px 0 #222, -2px 2px 0 #000;
     }
 
     .button:active {
@@ -567,7 +565,7 @@ body {
     .buttons_img {
         position: absolute;
         bottom: 69.1%;
-        left: 23%;
+        left: 30%;
         width: 65%;
         display: flex;
     }
