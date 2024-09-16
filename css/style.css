@@ -219,6 +219,203 @@ body {
     }
 }
 
+/* Estilo para telas entre 640px a 1024px */
+@media (min-width: 641px) and (max-width: 1024px) {
+    main {
+        display: inline-block;
+        margin-top: 0.3%;
+        position: relative;
+    }
+
+    .pokedex {
+        width: 100%;
+    }
+
+    .pokemon_image,
+    .pokemon_image_shiny {
+        position: absolute;
+        left: 30% !important;
+        bottom: 45.5%;
+        transform: translate(-39%, 0);
+        height: 20%;
+    }
+
+    .pokemon_image_background {
+        position: absolute;
+        top: 31%;
+        left: 19%;
+        width: 23.5%;
+        height: 27.2%;
+    }
+
+    .pokemon_data {
+        position: absolute;
+        font-weight: 600;
+        color: #aaa;
+        top: 61%;
+        right: 62.8%;
+        font-size: clamp(8px, 5vw, 16px);
+    }
+
+    .pokemon_name {
+        color: #3a444d;
+        text-transform: capitalize;
+    }
+
+    .pokemon_data_info {
+        position: absolute;
+        top: 25%;
+        left: 55%;
+        font-weight: 600;
+        width: 25%;
+    }
+
+    .pokemon_data_info thead tr {
+        color: #000;
+    }
+
+    .pokemon_data_info thead tr th.status {
+        text-align: start;
+    }
+
+    .pokemon_data_info thead tr th.value {
+        text-align: end;
+    }
+
+    .pokemon_data_info tbody tr td.info_status {
+        color: #413d3d;
+    }
+
+    .pokemon_data_info tbody tr td.info_status_number {
+        text-align: end;
+        color: #000;
+    }
+
+    .pokemon_data_info tfoot tr td.info_status_total {
+        color: #413d3d;
+    }
+
+    .pokemon_data_info tfoot tr td.info_status_total_number {
+        text-align: end;
+        color: #000;
+    }
+
+    .pokemon_wei_hei {
+        position: absolute;
+        top: 63%;
+        left: 55%;
+        font-weight: 600;
+        width: 25%;
+    }
+
+    .pokemon_wei_hei tr td.info_wei_hei {
+        color: #3a444d;
+        font-weight: 600;
+    }
+
+    .pokemon_wei_hei tr td.info_wei_hei_val {
+        color: #000;
+        text-align: end;
+    }
+
+    .form {
+        position: absolute;
+        width: 45%;
+        top: 70%;
+        left: 17%;
+    }
+
+    .input_search {
+        width: 60%;
+        padding: 3%;
+        outline: none;
+        border: 2px solid #333;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: clamp(8px, 5vw, 1rem);
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 9%;
+        left: 41.6%;
+        width: 41%;
+        transform: translate(-57%, 0);
+        display: flex;
+        gap: 20px;
+    }
+
+    .button {
+        width: 28%;
+        padding: 3%;
+        border: 2px solid #000;
+        border-radius: 5px;
+        font-size: clamp(5px, 5vw, 1rem);
+        font-weight: 300;
+        color: white;
+        background-color: #444;
+    }
+
+    .button:active {
+        box-shadow: inset -4px 4px 0 #222;
+        font-size: 0.9rem;
+    }
+
+    .buttons_img {
+        position: absolute;
+        bottom: 69.5%;
+        left: 23%;
+        width: 66%;
+        display: flex;
+    }
+
+    .button_img {
+        cursor: pointer;
+        background: none;
+        width: 7%;
+        border-radius: 12px;
+    }
+
+    .space {
+        margin-inline: 8%;
+    }
+
+    .buttons_img_gender {
+        position: absolute;
+        bottom: 69.1%;
+        left: 38.2%;
+        width: 20%;
+        display: flex;
+    }
+
+    .button_img_gender {
+        cursor: pointer;
+        background: none;
+        width: 10%;
+    }
+
+    .space_gender {
+        margin-inline: 3%;
+    }
+
+    .btn-female {
+        width: 6.7%;
+    }
+
+    .pokemon_type1 {
+        position: absolute;
+        left: 55.5%;
+        bottom: 16%;
+        width: 10%;
+    }
+
+    .pokemon_type2 {
+        position: absolute;
+        left: 69%;
+        bottom: 16%;
+        width: 10%;
+    }
+}
 /* Estilos para telas menores que 640px */
 @media (max-width: 640px) {
     body {
@@ -251,7 +448,7 @@ body {
         position: absolute;
         bottom: 45.5%;
         height: 14%;
-        left: 28%;
+        left: 30%;
     }
 
     .pokemon_data {
@@ -410,15 +607,15 @@ body {
 
     .pokemon_type1 {
         position: absolute;
-        left: 58%;
-        bottom: 15%;
-        width: 9.5%;
+        left: 65.9%;
+        bottom: 17.4%;
+        width: 12%;
     }
 
     .pokemon_type2 {
         position: absolute;
-        left: 70.7%;
-        bottom: 15%;
-        width: 9.5%;
+        left: 82%;
+        bottom: 17.4%;
+        width: 12%;
     }
 }

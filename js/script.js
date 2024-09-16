@@ -170,21 +170,25 @@ const renderPokemon = async (pokemon, gender = null) => {
 
     const props = data.id < 650 ? (isMobileDevice ? mobileProps : desktopProps) : standardProps[isMobileDevice ? 'mobile' : 'desktop'];
 
-
-
     if (data.id < 650) {
         setImageAttributes(pokemonImage, data.sprites.versions['generation-v']['black-white'].animated['front_default'], props.imageHeight, props.imagePosition);
         setImageAttributes(pokemonImageShiny, data.sprites.versions['generation-v']['black-white'].animated['front_shiny'], props.shinyHeight, props.shinyPosition);
     } else {
-        if (data.sprites['front_female']) btnFemale.hidden = false;
-        if (gender === 1) {
-            btnMale.hidden = false;
-            btnFemale.hidden = true;
-            setImageAttributes(pokemonImage, data.sprites['front_female'], props.imageHeight, props.imagePosition);
-            setImageAttributes(pokemonImageShiny, data.sprites['front_shiny_female'], props.shinyHeight, props.shinyPosition);
+        if (data.sprites['front_female'])  {
+            if (gender === 1) {
+                btnMale.hidden = false;
+                btnFemale.hidden = true;
+                setImageAttributes(pokemonImage, data.sprites['front_female'], props.imageHeight, props.imagePosition);
+                setImageAttributes(pokemonImageShiny, data.sprites['front_shiny_female'], props.shinyHeight, props.shinyPosition);
+            } else {
+                btnMale.hidden = true;
+                btnFemale.hidden = false;
+                setImageAttributes(pokemonImage, data.sprites['front_default'], props.imageHeight, props.imagePosition);
+                setImageAttributes(pokemonImageShiny, data.sprites['front_shiny'], props.shinyHeight, props.shinyPosition);
+            }
         } else {
             btnMale.hidden = true;
-            btnFemale.hidden = false;
+            btnFemale.hidden = true;
             setImageAttributes(pokemonImage, data.sprites['front_default'], props.imageHeight, props.imagePosition);
             setImageAttributes(pokemonImageShiny, data.sprites['front_shiny'], props.shinyHeight, props.shinyPosition);
         }
