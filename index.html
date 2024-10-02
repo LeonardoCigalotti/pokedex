@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <script defer src="./js/script.js"></script>
+    
+    <title>Pokedex</title>
+</head>
+<body>
+    <main>
+        <!-- Imagens de fundo e Pokémon -->
+        <img src="" alt="background" class="pokemon_image_background">
+        <img src="" alt="pokemon" class="pokemon_image">
+        <img src="" alt="pokemon shiny" class="pokemon_image_shiny" hidden>
+
+        <!-- Botões de navegação para as imagens -->
+        <div class="buttons_img">
+            <button class="button_img btn-prev-form" hidden>&lt;</button>
+            <div class="space"></div>
+            <img src="./images/shiny_icon.png" alt="Shiny Icon" class="button_img btn-next-form">
+        </div>
+
+        <!-- Botões de gênero -->
+        <div class="buttons_img_gender">
+            <img src="./images/female.png" alt="Female Icon" class="button_img_gender btn-female" hidden>
+            <div class="space_gender"></div>
+            <img src="./images/male.png" alt="Male Icon" class="button_img_gender btn-male" hidden>
+        </div>
+
+        <!-- Dados do Pokémon -->
+        <h1 class="pokemon_data">
+            <span class="pokemon_number"></span>
+            <span class="pokemon_name"></span>
+        </h1>
+
+        <!-- Tabela de informações de status do Pokémon -->
+        <table class="pokemon_data_info" hidden>
+            <thead>
+                <tr>
+                    <th class="status">Status</th>
+                    <th class="value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="info_status"></td>
+                    <td class="info_status_number"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="info_status_total">Total:</td>
+                    <td class="info_status_total_number"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Tabela de peso e altura do Pokémon -->
+        <table class="pokemon_wei_hei" hidden>
+            <tbody>
+                <tr>
+                    <td class="info_wei_hei"></td>
+                    <td class="info_wei_hei_val"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tipos do Pokémon -->
+        <img alt="type 1" class="pokemon_type1">
+        <img alt="type 2" class="pokemon_type2">
+
+        <!-- Formulário de busca -->
+        <form class="form">
+            <input type="search" class="input_search" placeholder="Name or Number" required>
+        </form>
+
+        <!-- Botões de navegação -->
+        <div class="buttons">
+            <button class="button btn-prev">&lt; Prev</button>
+            <button class="button btn-next">Next &gt;</button>
+        </div>
+
+        <!-- Imagem da Pokedex -->
+        <img src="./images/pokedex.png" alt="pokedex" class="pokedex">
+    </main>
+</body>
+</html>
